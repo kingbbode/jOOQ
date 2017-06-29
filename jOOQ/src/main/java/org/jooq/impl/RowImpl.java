@@ -314,12 +314,12 @@ implements
 
     @Override
     public final Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, Field<?>[] fields) {
-        return fields.fields(aliasFunction, fields);
+        return this.fields.fields(aliasFunction, fields);
     }
 
     @Override
     public final Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, String... fieldNames) {
-        return fields.fields(aliasFunction, fieldNames);
+        return this.fields.fields(aliasFunction, fieldNames);
     }
 
     @Override
@@ -339,7 +339,7 @@ implements
 
     @Override
     public final Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, Field<?>[] fields) {
-        return fields.fields(aliasFunction, fields);
+        return this.fields.fields(aliasFunction, fields);
     }
 
     @Override
