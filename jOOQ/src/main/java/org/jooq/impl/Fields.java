@@ -262,52 +262,52 @@ final class Fields<R extends Record> extends AbstractQueryPart implements Record
     }
 
     @Override
-    public Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction) {
+    public final Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction) {
         return new Field[0];
     }
 
     @Override
-    public Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, Field<?>[] fields) {
+    public final Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, Field<?>[] fields) {
         return new Field[0];
     }
 
     @Override
-    public Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, String... fieldNames) {
+    public final Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, String... fieldNames) {
         return new Field[0];
     }
 
     @Override
-    public Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, Name... fieldNames) {
+    public final Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, Name... fieldNames) {
         return new Field[0];
     }
 
     @Override
-    public Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, int... fieldIndexes) {
+    public final Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, int... fieldIndexes) {
         return new Field[0];
     }
 
     @Override
-    public Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction) {
+    public final Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction) {
         return new Field[0];
     }
 
     @Override
-    public Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, Field<?>[] fields) {
+    public final Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, Field<?>[] fields) {
         return new Field[0];
     }
 
     @Override
-    public Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, String... fieldNames) {
+    public final Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, String... fieldNames) {
         return new Field[0];
     }
 
     @Override
-    public Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, Name... fieldNames) {
+    public final Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, Name... fieldNames) {
         return new Field[0];
     }
 
     @Override
-    public Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, int... fieldIndexes) {
+    public final Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, int... fieldIndexes) {
         return new Field[0];
     }
 
