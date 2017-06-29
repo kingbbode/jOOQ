@@ -157,6 +157,39 @@ public interface Row extends FieldOrRow {
      * @return All available fields
      */
     Field<?>[] fields();
+    
+    /**
+     * Get all fields from this row, providing some fields.
+     *
+     * @return All available fields
+     * @see #field(Field)
+     */
+    Field<?>[] fields(Field<?>... fields);
+
+    /**
+     * Get all fields from this row, providing some field names.
+     *
+     * @return All available fields
+     * @see #field(String)
+     */
+    Field<?>[] fields(String... fieldNames);
+
+    /**
+     * Get all fields from this row, providing some field names.
+     *
+     * @return All available fields
+     * @see #field(Name)
+     */
+    Field<?>[] fields(Name... fieldNames);
+
+    /**
+     * Get all fields from this row, providing some field indexes.
+     *
+     * @return All available fields
+     * @see #field(int)
+     */
+    Field<?>[] fields(int... fieldIndexes);
+
 
     /**
      * Create an alias for fields from this row.
@@ -251,38 +284,6 @@ public interface Row extends FieldOrRow {
      * @return All available fields
      */
     Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, int... fieldIndexes);
-    
-    /**
-     * Get all fields from this row, providing some fields.
-     *
-     * @return All available fields
-     * @see #field(Field)
-     */
-    Field<?>[] fields(Field<?>... fields);
-
-    /**
-     * Get all fields from this row, providing some field names.
-     *
-     * @return All available fields
-     * @see #field(String)
-     */
-    Field<?>[] fields(String... fieldNames);
-
-    /**
-     * Get all fields from this row, providing some field names.
-     *
-     * @return All available fields
-     * @see #field(Name)
-     */
-    Field<?>[] fields(Name... fieldNames);
-
-    /**
-     * Get all fields from this row, providing some field indexes.
-     *
-     * @return All available fields
-     * @see #field(int)
-     */
-    Field<?>[] fields(int... fieldIndexes);
 
     /**
      * Get a field's index from this row.

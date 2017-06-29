@@ -40,6 +40,8 @@ import static org.jooq.impl.Tools.indexOrFail;
 
 import java.sql.SQLWarning;
 import java.util.Collection;
+import java.util.function.*;
+import java.util.function.Function;
 
 import org.jooq.Clause;
 import org.jooq.Context;
@@ -257,6 +259,56 @@ final class Fields<R extends Record> extends AbstractQueryPart implements Record
             result[i] = field(f[i]);
 
         return result;
+    }
+
+    @Override
+    public Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction) {
+        return new Field[0];
+    }
+
+    @Override
+    public Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, Field<?>[] fields) {
+        return new Field[0];
+    }
+
+    @Override
+    public Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, String... fieldNames) {
+        return new Field[0];
+    }
+
+    @Override
+    public Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, Name... fieldNames) {
+        return new Field[0];
+    }
+
+    @Override
+    public Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, int... fieldIndexes) {
+        return new Field[0];
+    }
+
+    @Override
+    public Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction) {
+        return new Field[0];
+    }
+
+    @Override
+    public Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, Field<?>[] fields) {
+        return new Field[0];
+    }
+
+    @Override
+    public Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, String... fieldNames) {
+        return new Field[0];
+    }
+
+    @Override
+    public Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, Name... fieldNames) {
+        return new Field[0];
+    }
+
+    @Override
+    public Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, int... fieldIndexes) {
+        return new Field[0];
     }
 
     @Override

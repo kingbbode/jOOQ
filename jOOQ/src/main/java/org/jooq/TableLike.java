@@ -142,6 +142,30 @@ public interface TableLike<R extends Record> extends QueryPart {
     Field<?>[] fields();
 
     /**
+     * Get all fields from this table, providing some fields.
+     *
+     * @return All available fields
+     * @see Row#fields(Field...)
+     */
+    Field<?>[] fields(Field<?>... fields);
+
+    /**
+     * Get all fields from this table, providing some field names.
+     *
+     * @return All available fields
+     * @see Row#fields(String...)
+     */
+    Field<?>[] fields(String... fieldNames);
+
+    /**
+     * Get all fields from this table, providing some field names.
+     *
+     * @return All available fields
+     * @see Row#fields(Name...)
+     */
+    Field<?>[] fields(Name... fieldNames);
+
+    /**
      * Create an alias for fields from this table.
      *
      * @return All fields
@@ -220,31 +244,7 @@ public interface TableLike<R extends Record> extends QueryPart {
      * @see Row#fields(BiFunction, int...)
      */
     Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, int... fieldIndexes);
-
-    /**
-     * Get all fields from this table, providing some fields.
-     *
-     * @return All available fields
-     * @see Row#fields(Field...)
-     */
-    Field<?>[] fields(Field<?>... fields);
-
-    /**
-     * Get all fields from this table, providing some field names.
-     *
-     * @return All available fields
-     * @see Row#fields(String...)
-     */
-    Field<?>[] fields(String... fieldNames);
-
-    /**
-     * Get all fields from this table, providing some field names.
-     *
-     * @return All available fields
-     * @see Row#fields(Name...)
-     */
-    Field<?>[] fields(Name... fieldNames);
-
+    
     /**
      * Get all fields from this table, providing some field indexes.
      *
