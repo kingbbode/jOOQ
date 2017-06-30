@@ -174,6 +174,100 @@ public interface TableLike<R extends Record> extends QueryPart {
     Field<?>[] fields(int... fieldIndexes);
 
     /**
+     * Create an alias for fields from this row.
+     * <p>
+     * field aliases are provided by a function. This is useful, for instance, to prefix all
+     * columns with a common prefix:
+     * <p>
+     * <code><pre>
+     * MY_TABLE.fields(f -> "prefix_" + f.getName());
+     * </pre></code>
+     *
+     * @param aliasFunction The function providing field aliases.
+     * @return The all fields
+     */
+    Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction);
+
+    /**
+     * Create an alias for fields from this row, providing some fields.
+     * @see #fields(Function)
+     * @see #fields(Field...)
+     * @return All available fields
+     */
+    Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, Field<?>... fields);
+
+    /**
+     * Create an alias for fields from this row, providing some field names.
+     * @see #fields(Function)
+     * @see #fields(String...)
+     * @return All available fields
+     */
+    Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, String... fieldNames);
+
+    /**
+     * Create an alias for fields from this row, providing some field names.
+     * @see #fields(Function)
+     * @see #fields(Name...)
+     * @return All available fields
+     */
+    Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, Name... fieldNames);
+
+    /**
+     * Create an alias for fields from this row, providing some field indexes.
+     * @see #fields(Function)
+     * @see #fields(int...)
+     * @return All available fields
+     */
+    Field<?>[] fields(Function<? super Field<?>, ? extends String> aliasFunction, int... fieldIndexes);
+
+    /**
+     * Create an alias for fields from this row.
+     * <p>
+     * field aliases are provided by a function. This is useful, for instance, to prefix all
+     * columns with a common prefix:
+     * <p>
+     * <code><pre>
+     * MY_TABLE.fields((f, i) -> "column" + i);
+     * </pre></code>
+     *
+     * @param aliasFunction The function providing field aliases.
+     * @return The all fields
+     */
+    Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction);
+
+    /**
+     * Create an alias for fields from this row, providing some fields.
+     * @see #fields(BiFunction)
+     * @see #fields(Field...)
+     * @return All available fields
+     */
+    Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, Field<?>... fields);
+
+    /**
+     * Create an alias for fields from this row, providing some field names.
+     * @see #fields(BiFunction)
+     * @see #fields(String...)
+     * @return All available fields
+     */
+    Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, String... fieldNames);
+
+    /**
+     * Create an alias for fields from this row, providing some field names.
+     * @see #fields(BiFunction)
+     * @see #fields(Name...)
+     * @return All available fields
+     */
+    Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, Name... fieldNames);
+
+    /**
+     * Create an alias for fields from this row, providing some field indexes.
+     * @see #fields(BiFunction)
+     * @see #fields(int...)
+     * @return All available fields
+     */
+    Field<?>[] fields(BiFunction<? super Field<?>, ? super Integer, ? extends String> aliasFunction, int... fieldIndexes);
+
+    /**
      * The underlying table representation of this object.
      * <p>
      * This method is useful for things like
